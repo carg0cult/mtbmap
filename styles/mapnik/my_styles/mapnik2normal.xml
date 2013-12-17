@@ -1695,128 +1695,116 @@
   </Style>
   <Style name="mtb_basic">
     <Rule name="mtb-track-scale-4-to-6">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-'))</Filter>
+      <Filter>([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-')</Filter>
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,2" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-3">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-'))</Filter>
+      <Filter>([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-')</Filter>
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="2.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2" offset="3.00"/>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-2">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-'))</Filter>
+      <Filter>([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-')</Filter>
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="4,5" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-1">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-'))</Filter>
+      <Filter>([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-')</Filter>
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="11,5" offset="3.00"/>
     </Rule>
-    <Rule name="mtb-track-scale-0">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='0' or [mtb:scale]='0+' or [mtb:scale]='0-'))</Filter>
+    <Rule name="smoothness_horrible">
+      <Filter>[smoothness] = 'horrible'</Filter>
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round" offset="3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="2.5" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2"/>
+      <LineSymbolizer stroke="blue" stroke-width="6.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4"/>
+    </Rule>
+    <Rule name="smoothness_very_bad">
+      <Filter>[smoothness] = 'very_bad'</Filter>
+      <MinScaleDenominator>1000</MinScaleDenominator>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <LineSymbolizer stroke="blue" stroke-width="4.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="7, 7"/>
+    </Rule>
+    <Rule name="smoothness_bad">
+      <Filter>[smoothness] = 'bad'</Filter>
+      <MinScaleDenominator>1000</MinScaleDenominator>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <LineSymbolizer stroke="blue" stroke-width="4.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="4, 4"/>
+    </Rule>
+    <Rule name="smoothness_intermediate">
+      <Filter>[smoothness] = 'intermediate'</Filter>
+      <MinScaleDenominator>1000</MinScaleDenominator>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <LineSymbolizer stroke="blue" stroke-width="4.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="2, 2"/>
+    </Rule>
+    <Rule name="smoothness_excellent_good">
+      <Filter>([smoothness] = 'excellent' or [smoothness] = 'good')</Filter>
+      <MinScaleDenominator>1000</MinScaleDenominator>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <LineSymbolizer stroke="blue" stroke-width="4.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="1, 1"/>
     </Rule>
     <Rule name="mtb-track-scale-4-to-6">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-'))</Filter>
+      <Filter>([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-')</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="5.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,1,2" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-3">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-'))</Filter>
+      <Filter>([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-')</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="2.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2" offset="3.00"/>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-2">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-'))</Filter>
+      <Filter>([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-')</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="3,3" offset="3.00"/>
     </Rule>
     <Rule name="mtb-track-scale-1">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-'))</Filter>
+      <Filter>([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-')</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="8,4" offset="3.00"/>
     </Rule>
-    <Rule name="mtb-track-scale-0">
-      <Filter>([offsetside] = -1 and ([mtb:scale]='0' or [mtb:scale]='0+' or [mtb:scale]='0-'))</Filter>
+    <Rule name="smoothness_horrible">
+      <Filter>[smoothness] = 'horrible'</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" offset="3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="2.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2"/>
+      <LineSymbolizer stroke="blue" stroke-width="5.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4"/>
     </Rule>
-    <Rule name="mtb-track-scale-4-to-6">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-'))</Filter>
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,2" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-3">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-'))</Filter>
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="2.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2" offset="-3.00"/>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-2">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-'))</Filter>
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="4,5" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-1">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-'))</Filter>
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="11,5" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-0">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='0' or [mtb:scale]='0+' or [mtb:scale]='0-'))</Filter>
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="4.00" stroke-opacity="1" stroke-linejoin="round" stroke-linecap="round" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-4-to-6">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='4' or [mtb:scale]='4+' or [mtb:scale]='4-' or [mtb:scale]='5' or [mtb:scale]='5+' or [mtb:scale]='5-' or [mtb:scale]='6' or [mtb:scale]='6+' or [mtb:scale]='6-'))</Filter>
+    <Rule name="smoothness_very_bad">
+      <Filter>[smoothness] = 'very_bad'</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="5.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,1,2" offset="-3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="3.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="7, 7"/>
     </Rule>
-    <Rule name="mtb-track-scale-3">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='3' or [mtb:scale]='3+' or [mtb:scale]='3-'))</Filter>
+    <Rule name="smoothness_bad">
+      <Filter>[smoothness] = 'bad'</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="2.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="6,2" offset="-3.00"/>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="6.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="0,2,2,4" offset="-3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="3.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="4, 4"/>
     </Rule>
-    <Rule name="mtb-track-scale-2">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='2' or [mtb:scale]='2+' or [mtb:scale]='2-'))</Filter>
+    <Rule name="smoothness_intermediate">
+      <Filter>[smoothness] = 'intermediate'</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="3,3" offset="-3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="3.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="2, 2"/>
     </Rule>
-    <Rule name="mtb-track-scale-1">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='1' or [mtb:scale]='1+' or [mtb:scale]='1-'))</Filter>
+    <Rule name="smoothness_excellent_good">
+      <Filter>([smoothness] = 'excellent' or [smoothness] = 'good')</Filter>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="8,4" offset="-3.00"/>
-    </Rule>
-    <Rule name="mtb-track-scale-0">
-      <Filter>([offsetside] = 1 and ([mtb:scale]='0' or [mtb:scale]='0+' or [mtb:scale]='0-'))</Filter>
-      <MinScaleDenominator>25000</MinScaleDenominator>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <LineSymbolizer stroke="rgb(113,0,104)" stroke-width="3.00" stroke-opacity="1" stroke-linejoin="bevel" stroke-linecap="butt" offset="-3.00"/>
+      <LineSymbolizer stroke="blue" stroke-width="3.0" offset="-3.0" stroke-linejoin="bevel" stroke-linecap="butt" stroke-dasharray="1, 1"/>
     </Rule>
     <Rule name="mtb-track">
       <MinScaleDenominator>100000</MinScaleDenominator>
@@ -1877,13 +1865,6 @@
       <MinScaleDenominator>1000</MinScaleDenominator>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <LinePatternSymbolizer file="../symbols/mtb_up.png"/>
-    </Rule>
-  </Style>
-  <Style name="mtbwarning">
-    <Rule name="dangeruos-spot">
-      <MinScaleDenominator>1000</MinScaleDenominator>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <PointSymbolizer file="../symbols/warning.png" allow-overlap="1"/>
     </Rule>
   </Style>
   <Style name="mwaybridge_layer0_casing">
@@ -5739,10 +5720,11 @@
     <StyleName>mtb_basic</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
-      <Parameter name="table">(select osm_id,way,"mtb:scale","mtb:scale:uphill", offsetside, highway, tracktype
-        from planet_osm_routes2
+      <Parameter name="table">(select osm_id,way,"mtb:scale","mtb:scale:uphill", smoothness
+        from planet_osm_line
         where ("mtb:scale" is not null or
-        "mtb:scale:uphill" is not null)) as mtb_basic</Parameter>
+        "mtb:scale:uphill" is not null or
+        smoothness is not null)) as mtb_basic</Parameter>
       <Parameter name="password">&passwd;</Parameter>
       <Parameter name="host">localhost</Parameter>
       <Parameter name="port">5432</Parameter>
@@ -5752,7 +5734,7 @@
       <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
     </Datasource>
   </Layer>
-  <Layer name="class_bicycle_mtb" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" minzoom="1000" maxzoom="250000000000">
+  <Layer name="class_bicycle_mtb" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" minzoom="1000" maxzoom="100000">
     <StyleName>class_bicycle_mtb</StyleName>
     <Datasource>
       <Parameter name="type">postgis</Parameter>
@@ -5792,20 +5774,6 @@
         from planet_osm_line
         where (("mtb:scale:uphill" in ('3', '4', '5') and incline in ('up','down'))
         or ("mtb:scale" in ('2-', '2', '2+', '3-', '3', '3+', '4-', '4', '4+', '5-', '5', '5+') and incline in ('up','down')))) as mtb_incline</Parameter>
-      <Parameter name="password">&passwd;</Parameter>
-      <Parameter name="host">localhost</Parameter>
-      <Parameter name="port">5432</Parameter>
-      <Parameter name="user">rob</Parameter>
-      <Parameter name="dbname">mtbmap_data</Parameter>
-      <Parameter name="estimate_extent">1</Parameter>
-      <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
-    </Datasource>
-  </Layer>
-  <Layer name="mtbwarning" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" clear-label-cache="1" minzoom="1000" maxzoom="250000000000">
-    <StyleName>mtbwarning</StyleName>
-    <Datasource>
-      <Parameter name="type">postgis</Parameter>
-      <Parameter name="table">(select way from planet_osm_point where warning is not null) as mtbwarning</Parameter>
       <Parameter name="password">&passwd;</Parameter>
       <Parameter name="host">localhost</Parameter>
       <Parameter name="port">5432</Parameter>
